@@ -1,0 +1,64 @@
+@import "colors";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+body {
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  background: url('../images/bg-shadow.png') 50% 50% no-repeat, url('../images/bg-pattern.jpg') repeat;
+  background-size: cover, auto auto;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-family: 'Exo 2.0', Arial, sans-serif;
+  text-shadow: 0 1px 0 $black;
+  color: $text-light;
+  font-family: "Exo 2.0";
+  font-size: 36px;
+  font-weight: 100;
+}
+
+@font-face {
+    font-family: 'Exo 2.0';
+    src: url('../fonts/Exo20-Thin.woff2') format('woff2'),
+         url('../fonts/Exo20-Thin.woff') format('woff'),
+         url('../fonts/Exo20-Thin.ttf') format('truetype'),
+         url('../fonts/Exo20-Thin.svg#Exo2.0-Thin') format('svg'),
+         url('../fonts/Exo20-Thin.eot?#iefix') format('embedded-opentype');
+    font-weight: 100;
+    font-style: normal;
+}
