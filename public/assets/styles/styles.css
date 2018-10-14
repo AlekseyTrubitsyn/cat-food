@@ -53,6 +53,8 @@ img {
   flex-direction: row;
   justify-content: center;
   align-items: center; }
+  .catalog .triple-spinner {
+    margin-top: 50px; }
 
 .catalog-item {
   width: 320px;
@@ -64,12 +66,12 @@ img {
   margin: 100px 40px 0;
   position: relative; }
 
-.catalog-item.hover {
+.catalog-item.hovered {
   border-color: #2ea8e6; }
-  .catalog-item.hover .catalog-item-header__corner,
-  .catalog-item.hover .catalog-item-header__text-container {
+  .catalog-item.hovered .catalog-item-header__corner,
+  .catalog-item.hovered .catalog-item-header__text-container {
     border-color: #2ea8e6; }
-  .catalog-item.hover .catalog-item__size {
+  .catalog-item.hovered .catalog-item__size {
     background: #2ea8e6; }
 
 .catalog-item.selected {
@@ -80,12 +82,12 @@ img {
   .catalog-item.selected .catalog-item__size {
     background: #d91667; }
 
-.catalog-item.selected-hover {
+.catalog-item.selected.hovered {
   border-color: #e62e7a; }
-  .catalog-item.selected-hover .catalog-item-header__corner,
-  .catalog-item.selected-hover .catalog-item-header__text-container {
+  .catalog-item.selected.hovered .catalog-item-header__corner,
+  .catalog-item.selected.hovered .catalog-item-header__text-container {
     border-color: #e62e7a; }
-  .catalog-item.selected-hover .catalog-item__size {
+  .catalog-item.selected.hovered .catalog-item__size {
     background: #e62e7a; }
 
 .catalog-item.disabled {
@@ -173,7 +175,7 @@ img {
   top: calc(100% + 10px);
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
+  width: calc(100% + 8px);
   font-size: 13px;
   font-weight: 400;
   line-height: 16px; }
@@ -181,3 +183,55 @@ img {
     color: #1698d9;
     text-decoration: none;
     border-bottom: 1px dashed #1698d9; }
+
+.triple-spinner {
+  display: block;
+  position: relative;
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  border-top: 4px solid #1698d9;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite; }
+
+.triple-spinner::before,
+.triple-spinner::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 4px solid transparent; }
+
+.triple-spinner::before {
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-top-color: #d91667;
+  -webkit-animation: spin 3s linear infinite;
+  animation: spin 3.5s linear infinite; }
+
+.triple-spinner::after {
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-top-color: #fff;
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1.75s linear infinite; }
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }

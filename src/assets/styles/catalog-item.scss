@@ -17,7 +17,7 @@ $top-shift: 50px;
   position: relative;
 }
 
-.catalog-item.hover {
+.catalog-item.hovered {
   border-color: $border-default-hover;
 
   .catalog-item-header__corner,
@@ -43,7 +43,7 @@ $top-shift: 50px;
   }
 }
 
-.catalog-item.selected-hover {
+.catalog-item.selected.hovered {
   border-color: $border-selected-hover;
 
   .catalog-item-header__corner,
@@ -165,7 +165,7 @@ $top-shift: 50px;
   top: calc(100% + 10px);
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
+  width: calc(100% + #{2 * $border-width});
   font-size: 13px;
   font-weight: 400;
   line-height: 16px;

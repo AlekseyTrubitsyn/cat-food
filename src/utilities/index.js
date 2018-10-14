@@ -49,7 +49,7 @@ export const getStaticData = () => { return [
       unit: 'кг'
     },
     footer: 'Филе из цыплят с трюфелями в бульоне.',
-    disabled: false,
+    disabled: true,
     image: {
       source: './assets/images/cat.png',
       alt: 'Нямушка с фуа-гра'
