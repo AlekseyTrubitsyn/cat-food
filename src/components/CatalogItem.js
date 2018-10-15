@@ -58,7 +58,10 @@ const CatalogItem = (props) => {
               <li
                 key={index}
                 className="catalog-item__feature"
-              >{item}</li>
+              >{item.split(' ')
+                    .map(subitem => isNaN(subitem) ? subitem + ' ' : (<b>{subitem}</b> ))
+                    .reduce((result, subitem) => [...result, ' ', subitem], [])
+              }</li>
             ))}
           </ul>
         }
