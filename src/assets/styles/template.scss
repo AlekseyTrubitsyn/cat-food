@@ -35,6 +35,11 @@ img {
   display: block;
 }
 
+button {
+  background: none;
+  border: none;
+}
+
 .App {
   height: 100vh;
   display: flex;
@@ -52,6 +57,10 @@ img {
   font-weight: 100;
 }
 
+.shake {
+  animation: 0.4s ease-out shakeX;
+}
+
 @font-face {
     font-family: 'Exo 2.0';
     src: url('../fonts/Exo20-Thin.woff2') format('woff2'),
@@ -61,4 +70,16 @@ img {
          url('../fonts/Exo20-Thin.eot?#iefix') format('embedded-opentype');
     font-weight: 100;
     font-style: normal;
+}
+
+@keyframes shakeX {
+  25% {
+    transform: translateX(-5%);
+  }
+  50% {
+    transform: translateX(5%);
+  }
+  75% {
+    transform: translateX(-5%);
+  }
 }

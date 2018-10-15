@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 const CatalogItem = (props) => {
@@ -15,12 +15,18 @@ const CatalogItem = (props) => {
     image
   } = data;
 
-  const handleClick = () => {
+  const handleClick = (element) => {
     if (!disabled) {
       onSelect();
     } else {
-      // toast(`Печалька, ${subtitle} закончился.`, 'error');
-      console.log(`Печалька, ${subtitle} закончился.`);
+      element.classList.add('shake');
+
+      setTimeout(() => {
+        if (element) {
+          element.classList.remove('shake')
+        }
+      }, 400);
+
     }
   }
 
@@ -39,7 +45,7 @@ const CatalogItem = (props) => {
   return (
     <article
       className={articleClassName}
-      onClick={handleClick}
+      onClick={(e) => handleClick(e.currentTarget)}
       onMouseEnter={(e) => handleMouseEnter(e.currentTarget)}
       onMouseLeave={(e) => handleMouseLeave(e.currentTarget)}
     >
@@ -84,7 +90,7 @@ const CatalogItem = (props) => {
           ? (<p>Печалька, {subtitle} закончился.</p>)
           : selected
             ? (<p>{footer}</p>)
-            : (<p>Чего сидишь? Порадуй котэ, <a href="#" onClick={handleClick}>купи.</a></p>)
+            : (<p>Чего сидишь? Порадуй котэ, <button className="catalog-item__link" onClick={handleClick}>купи.</button></p>)
         }
       </footer>
     </article>

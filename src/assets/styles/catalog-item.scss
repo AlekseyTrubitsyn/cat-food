@@ -15,6 +15,7 @@ $top-shift: 45px;
   border-bottom-right-radius: $border-radius;
   margin: #{$top-shift + $border-width - 2}  40px 0;
   position: relative;
+  cursor: pointer;
 }
 
 .catalog-item.hovered {
@@ -27,6 +28,11 @@ $top-shift: 45px;
 
   .catalog-item__size {
     background: $border-default-hover;
+  }
+
+  .catalog-item__link {
+    color: $border-default-hover;
+    border-color: $border-default-hover;
   }
 }
 
@@ -70,6 +76,14 @@ $top-shift: 45px;
 
   .catalog-item__footer {
     color: $text-footer-disabled;
+  }
+
+  .catalog-item-header__text,
+  .catalog-item__title,
+  .catalog-item__subtitle,
+  .catalog-item__features,
+  .catalog-item__image-container {
+    opacity: 0.5;
   }
 }
 
@@ -186,11 +200,15 @@ $top-shift: 45px;
   font-size: 13px;
   font-weight: 400;
   line-height: 16px;
+}
 
-  a {
-    color: $text-footer-link;
-    text-decoration: none;
-    font-weight: 700;
-    border-bottom: 1px dashed $text-footer-link;
-  }
+.catalog-item__link {
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: $text-footer-link;
+  text-decoration: none;
+  font-weight: 700;
+  border-bottom: 1px dashed $text-footer-link;
+  padding: 0;
 }

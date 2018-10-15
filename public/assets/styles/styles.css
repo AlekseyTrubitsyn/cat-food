@@ -27,6 +27,10 @@ img {
   height: auto;
   display: block; }
 
+button {
+  background: none;
+  border: none; }
+
 .App {
   height: 100vh;
   display: flex;
@@ -42,11 +46,22 @@ img {
   font-size: 36px;
   font-weight: 100; }
 
+.shake {
+  animation: 0.4s ease-out shakeX; }
+
 @font-face {
   font-family: 'Exo 2.0';
   src: url("../fonts/Exo20-Thin.woff2") format("woff2"), url("../fonts/Exo20-Thin.woff") format("woff"), url("../fonts/Exo20-Thin.ttf") format("truetype"), url("../fonts/Exo20-Thin.svg#Exo2.0-Thin") format("svg"), url("../fonts/Exo20-Thin.eot?#iefix") format("embedded-opentype");
   font-weight: 100;
   font-style: normal; }
+
+@keyframes shakeX {
+  25% {
+    transform: translateX(-5%); }
+  50% {
+    transform: translateX(5%); }
+  75% {
+    transform: translateX(-5%); } }
 
 .catalog {
   display: flex;
@@ -64,7 +79,8 @@ img {
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   margin: 47px 40px 0;
-  position: relative; }
+  position: relative;
+  cursor: pointer; }
 
 .catalog-item.hovered {
   border-color: #2ea8e6; }
@@ -73,6 +89,9 @@ img {
     border-color: #2ea8e6; }
   .catalog-item.hovered .catalog-item__size {
     background: #2ea8e6; }
+  .catalog-item.hovered .catalog-item__link {
+    color: #2ea8e6;
+    border-color: #2ea8e6; }
 
 .catalog-item.selected {
   border-color: #d91667; }
@@ -99,6 +118,12 @@ img {
     background: #b3b3b3; }
   .catalog-item.disabled .catalog-item__footer {
     color: #ffff66; }
+  .catalog-item.disabled .catalog-item-header__text,
+  .catalog-item.disabled .catalog-item__title,
+  .catalog-item.disabled .catalog-item__subtitle,
+  .catalog-item.disabled .catalog-item__features,
+  .catalog-item.disabled .catalog-item__image-container {
+    opacity: 0.5; }
 
 .catalog-item__header {
   width: calc(100% - 45px);
@@ -194,11 +219,16 @@ img {
   font-size: 13px;
   font-weight: 400;
   line-height: 16px; }
-  .catalog-item__footer a {
-    color: #1698d9;
-    text-decoration: none;
-    font-weight: 700;
-    border-bottom: 1px dashed #1698d9; }
+
+.catalog-item__link {
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #1698d9;
+  text-decoration: none;
+  font-weight: 700;
+  border-bottom: 1px dashed #1698d9;
+  padding: 0; }
 
 .triple-spinner {
   display: block;
