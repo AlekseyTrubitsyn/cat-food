@@ -16,6 +16,8 @@ $top-shift: 45px;
   margin: #{$top-shift + $border-width - 2} 40px 60px;
   position: relative;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
 }
 
 .catalog-item.hovered {
@@ -94,7 +96,7 @@ $top-shift: 45px;
 
   .catalog-item-header__corner {
     position: absolute;
-    top: 0;
+    top: -$top-shift;
     left: -26px;
     width: 80%;
     height: $top-shift + 1;
@@ -106,7 +108,7 @@ $top-shift: 45px;
   }
 
   .catalog-item-header__text-container {
-    padding: 17px 0 6px;
+    padding: 17px 0 7px;
     background: white;
     border-top: $border;
     border-right: $border;

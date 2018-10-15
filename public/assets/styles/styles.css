@@ -91,7 +91,9 @@ button {
   border-bottom-right-radius: 15px;
   margin: 47px 40px 60px;
   position: relative;
-  cursor: pointer; }
+  cursor: pointer;
+  display: flex;
+  flex-direction: column; }
 
 .catalog-item.hovered {
   border-color: #2ea8e6; }
@@ -142,7 +144,7 @@ button {
   position: relative; }
   .catalog-item__header .catalog-item-header__corner {
     position: absolute;
-    top: 0;
+    top: -45px;
     left: -26px;
     width: 80%;
     height: 46px;
@@ -152,7 +154,7 @@ button {
     border-top: 4px solid #1698d9;
     z-index: 0; }
   .catalog-item__header .catalog-item-header__text-container {
-    padding: 17px 0 6px;
+    padding: 17px 0 7px;
     background: white;
     border-top: 4px solid #1698d9;
     border-right: 4px solid #1698d9;
