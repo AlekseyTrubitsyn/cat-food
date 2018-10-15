@@ -6,7 +6,7 @@
 
 html,
 body {
-  width: 100%;
+  min-height: 100%;
 }
 
 body {
@@ -42,6 +42,7 @@ button {
 
 .App {
   height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -55,6 +56,8 @@ button {
   font-family: "Exo 2.0";
   font-size: 36px;
   font-weight: 100;
+  padding: 0 20px;
+  text-align: center;
 }
 
 .shake {
@@ -81,5 +84,13 @@ button {
   }
   75% {
     transform: translateX(-5%);
+  }
+}
+
+@media (max-width: 1024px) {
+  .App {
+    justify-content: flex-start;
+    padding-top: 20px;
+    height: 100%;
   }
 }

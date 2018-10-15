@@ -13,7 +13,7 @@ $top-shift: 45px;
   border-top: none;
   border-bottom-left-radius: $border-radius;
   border-bottom-right-radius: $border-radius;
-  margin: #{$top-shift + $border-width - 2}  40px 0;
+  margin: #{$top-shift + $border-width - 2} 40px 60px;
   position: relative;
   cursor: pointer;
 }
@@ -211,4 +211,11 @@ $top-shift: 45px;
   font-weight: 700;
   border-bottom: 1px dashed $text-footer-link;
   padding: 0;
+}
+
+@media (max-width: 1024px) {
+  .catalog-item {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
