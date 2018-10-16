@@ -1,6 +1,7 @@
 export const getStaticData = () => { return [
   {
     header: 'Сказочное заморское яство',
+    headerSelectedHovered: 'Котэ не одобряет?',
     title: 'Нямушка',
     subtitle: 'с фуа-гра',
     features: [
@@ -19,6 +20,7 @@ export const getStaticData = () => { return [
     }
   }, {
     header: 'Сказочное заморское яство',
+    headerSelectedHovered: 'Котэ не одобряет?',
     title: 'Нямушка',
     subtitle: 'с рыбой',
     features: [
@@ -37,6 +39,7 @@ export const getStaticData = () => { return [
     }
   }, {
     header: 'Сказочное заморское яство',
+    headerSelectedHovered: 'Котэ не одобряет?',
     title: 'Нямушка',
     subtitle: 'с курой',
     features: [

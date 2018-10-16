@@ -6,6 +6,7 @@ const CatalogItem = (props) => {
 
   const {
     header = 'Сказочное заморское яство',
+    headerSelectedHovered = 'Котэ не одобряет?',
     title,
     subtitle,
     features,
@@ -52,7 +53,8 @@ const CatalogItem = (props) => {
       <header className="catalog-item__header">
         <div className="catalog-item-header__corner"></div>
         <div className="catalog-item-header__text-container">
-          <p className="catalog-item-header__text">{header}</p>
+          <p className="catalog-item-header__text catalog-item-header__text--default">{header}</p>
+          {selected && <p className="catalog-item-header__text catalog-item-header__text--hover">{headerSelectedHovered}</p>}
         </div>
       </header>
       <div className="catalog-item__main">
@@ -100,6 +102,7 @@ const CatalogItem = (props) => {
 CatalogItem.propTypes = {
   data: PropTypes.shape({
     header: PropTypes.string,
+    headerSelectedHovered: PropTypes.string,
     title: PropTypes.string.isRequired,
     subtitle: PropTypes.string,
     features: PropTypes.arrayOf(PropTypes.string),

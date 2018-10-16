@@ -121,6 +121,11 @@ button {
     border-color: #e62e7a; }
   .catalog-item.selected.hovered .catalog-item__size {
     background: #e62e7a; }
+  .catalog-item.selected.hovered .catalog-item-header__text--default {
+    display: none; }
+  .catalog-item.selected.hovered .catalog-item-header__text--hover {
+    color: #e62e7a;
+    display: block; }
 
 .catalog-item.disabled {
   border-color: #b3b3b3; }
@@ -165,6 +170,8 @@ button {
     z-index: 5; }
   .catalog-item__header .catalog-item-header__text {
     color: #666666; }
+  .catalog-item__header .catalog-item-header__text--hover {
+    display: none; }
 
 .catalog-item__main {
   display: flex;

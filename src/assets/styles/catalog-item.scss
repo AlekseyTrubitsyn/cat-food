@@ -62,6 +62,15 @@ $top-shift: 45px;
   .catalog-item__size {
     background: $border-selected-hover;
   }
+
+  .catalog-item-header__text--default {
+    display: none;
+  }
+
+  .catalog-item-header__text--hover {
+    color: $border-selected-hover;
+    display: block;
+  }
 }
 
 .catalog-item.disabled {
@@ -121,6 +130,10 @@ $top-shift: 45px;
 
   .catalog-item-header__text {
     color: $text-additionals
+  }
+
+  .catalog-item-header__text--hover {
+    display: none;
   }
 }
 
