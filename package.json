@@ -9,7 +9,7 @@
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-scripts": "2.0.4",
-    "yarn": "^1.10.1"
+    "yarn": "^1.22.0"
   },
   "scripts": {
     "build-css": "node-sass-chokidar ./src/assets/styles/styles.scss ./public/assets/styles/styles.css",
